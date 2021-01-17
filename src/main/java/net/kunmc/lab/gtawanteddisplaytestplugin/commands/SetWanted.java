@@ -6,7 +6,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SetWanted implements CommandExecutor {
     @Override
@@ -29,9 +33,24 @@ public class SetWanted implements CommandExecutor {
             return true;
         }
 
-        byte[] message = ("ChangeWanted " + args[0] + " " + args[1]).getBytes(StandardCharsets.UTF_8);
+        try
+        {
 
-        player.sendPluginMessage(GTAWantedDisplayTestPlugin.plugin, "GTA", message);
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            DataOutputStream out = new DataOutputStream(baos);
+            out.writeByte(0);
+            out.writeBytes("" + args[0] + "|" + args[1]);
+            out.writeByte(0);
+            byte[] bytes = baos.toByteArray();
+
+            player.sendPluginMessage(GTAWantedDisplayTestPlugin.plugin, "gta:changewanted", bytes);
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
 
         return true;
     }

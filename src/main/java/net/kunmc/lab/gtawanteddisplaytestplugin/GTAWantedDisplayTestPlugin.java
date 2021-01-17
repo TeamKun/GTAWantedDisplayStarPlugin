@@ -15,8 +15,8 @@ public final class GTAWantedDisplayTestPlugin extends JavaPlugin implements Plug
         plugin = this;
 
         Bukkit.getPluginCommand("wanted").setExecutor(new SetWanted());
-        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "GTA");
-        Bukkit.getMessenger().registerIncomingPluginChannel(this, "GTA", this);
+        Bukkit.getMessenger().registerOutgoingPluginChannel(this, "gta:changewanted");
+        Bukkit.getMessenger().registerIncomingPluginChannel(this, "gta:changewanted", this);
     }
 
     @Override
