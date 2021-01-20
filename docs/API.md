@@ -10,8 +10,6 @@
 
 ## リポジトリと依存関係
 以下のリポジトリと依存関係を追加したください。
-<details>
-<summary>クリックで開く</summary>
 ### Maven
 ```xml
 <repositories>
@@ -61,7 +59,6 @@ ibraryDependencies += "com.github.teamkun" % "gtawanteddisplaystarplugin" % "Tag
 
 :dependencies [[com.github.teamkun/gtawanteddisplaystarplugin "Tag"]]
 ```
-</details>
 
 ## API記述例
 ```java
