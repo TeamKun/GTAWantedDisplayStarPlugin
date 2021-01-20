@@ -8,6 +8,9 @@
 1. リポジトリの追加
 2. 実際のコード
 
+## JavaDocがほしいひと
+[ここ](https://teamkun.github.io/GTAWantedDisplayStarPlugin/)にありますのでご自由に御覧ください。
+
 ## リポジトリと依存関係
 以下のリポジトリと依存関係を追加したください。
 ### Maven

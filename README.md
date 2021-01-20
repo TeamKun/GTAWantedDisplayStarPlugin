@@ -10,6 +10,9 @@ GTAWantedDisplayMod のサーバー側テスト用プラグインです。
 ## API
 [ここ](docs/API.md)を参照してください。
 
+### JavaDoc
+[ここ](https://teamkun.github.io/GTAWantedDisplayStarPlugin/)を御覧ください。
+
 ## 仕様
 
 ### コマンド
