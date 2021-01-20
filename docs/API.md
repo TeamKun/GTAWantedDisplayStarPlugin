@@ -11,7 +11,7 @@
 ## リポジトリと依存関係
 以下のリポジトリと依存関係を追加したください。
 <details>
-    <summary>クリックで開く</summary>
+<summary>クリックで開く</summary>
 ### Maven
 ```xml
 <repositories>
