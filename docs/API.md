@@ -12,49 +12,55 @@
 以下のリポジトリと依存関係を追加したください。
 <details>
     <summary>クリックで開く</summary>
-    ### Maven
-    ```xml
-    <repositories>
-        ...
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-        ...
-    </repositories>
-    <dependency>
-        <groupId>com.github.teamkun</groupId>
-        <artifactId>gtawanteddisplaystarplugin</artifactId>
-        <version>Tag</version>
-    </dependency>
-    ```
-
-    ### Gradle
-
-    ```javascript
-    maven {
-        id 'jitpack'
-        url 'https://jitpack.io' 
-    }
+### Maven
+```xml
+<repositories>
     ...
-    dependencies {
-        implementation 'com.github.teamkun:gtawanteddisplaystarplugin:Tag'
-    }
-    ```
-
-    ### Sbt
-    ```
-    resolvers += "jitpack" at "https://jitpack.io"
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
     ...
-    libraryDependencies += "com.github.teamkun" % "gtawanteddisplaystarplugin" % "Tag"
-    ```
+</repositories>
+<dependency>
+    <groupId>com.github.teamkun</groupId>
+    <artifactId>gtawanteddisplaystarplugin</artifactId>
+    <version>Tag</version>
+</dependency>
+```
 
-    ### Ieiningen
-    ```
-    :repositories [["jitpack" "https://jitpack.io"]]
-    ...
-    :dependencies [[com.github.teamkun/gtawanteddisplaystarplugin "Tag"]]
-    ```
+### Gradle
+
+```javascript
+maven {
+    id 'jitpack'
+    url 'https://jitpack.io' 
+}
+
+...
+
+dependencies {
+    implementation 'com.github.teamkun:gtawanteddisplaystarplugin:Tag'
+}
+```
+
+### Sbt
+```
+resolvers += "jitpack" at "https://jitpack.io"
+
+...
+
+ibraryDependencies += "com.github.teamkun" % "gtawanteddisplaystarplugin" % "Tag"
+```
+
+### Ieiningen
+```
+:repositories [["jitpack" "https://jitpack.io"]]
+
+...
+
+:dependencies [[com.github.teamkun/gtawanteddisplaystarplugin "Tag"]]
+```
 </details>
 
 ## API記述例
