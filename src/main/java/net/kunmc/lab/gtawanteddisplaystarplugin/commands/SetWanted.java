@@ -32,7 +32,7 @@ public class SetWanted implements CommandExecutor
             Integer.parseInt(args[0]);
             Integer.parseInt(args[1]);
         } catch (NumberFormatException e) {
-            sender.sendMessage("引数バグってんぞ");
+            sender.sendMessage("引数がおかしいようです！");
             return true;
         }
 
@@ -40,6 +40,7 @@ public class SetWanted implements CommandExecutor
                 Integer.parseInt(args[0]),
                 Integer.parseInt(args[1]),
                 Boolean.parseBoolean(args[2]));
+        sender.sendMessage(ChatColor.GREEN + "パケットを送信しました。");
 
         return true;
     }
