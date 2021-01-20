@@ -1,8 +1,7 @@
 name: GTAWantedDisplayTestPlugin
 version: ${project.version}
-main: net.kunmc.lab.gtawanteddisplaytestplugin.GTAWantedDisplayTestPlugin
+main: net.kunmc.lab.gtawanteddisplaystarplugin.GTAWantedDisplayStarPlugin
 api-version: 1.15
 commands:
   wanted:
-
-    usage: /<Command> <MaxWanted:int> <NowWanted:double>
+    usage: /<Command> <NowWanted:int> <MaxWanted:int> <点滅:boolean>
