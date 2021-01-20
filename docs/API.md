@@ -20,11 +20,15 @@
     </repository>
     ...
 </repositories>
-<dependency>
-    <groupId>com.github.teamkun</groupId>
-    <artifactId>gtawanteddisplaystarplugin</artifactId>
-    <version>Tag</version>
-</dependency>
+<dependencies>
+    ...
+    <dependency>
+        <groupId>com.github.teamkun</groupId>
+        <artifactId>gtawanteddisplaystarplugin</artifactId>
+        <version>Tag</version>
+    </dependency>
+    ...
+</dependencies>
 ```
 
 ### Gradle
