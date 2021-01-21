@@ -73,8 +73,12 @@ ibraryDependencies += "com.github.teamkun" % "gtawanteddisplaystarplugin" % "Tag
 StarDisplayAPI api = GTAWantedDisplayStarPlugin.getApi();
 
 //プレイヤーに星を表示します。
-api.showStar(Player, Max, WantedLevel, Blinking);
+api.showStar(Player, Max, WantedLevel, Flag);
 
 //オンラインのすべてのプレイヤーに星を表示します。
-api.showStarBroadcast(Player, Max, WantedLevel, Blinking);
+api.showStarBroadcast(Player, Max, WantedLevel, Flag...);
 ```
+
+## 使用可能フラグ
++ BLINK => 星が点滅します。
++ NONE => 追加オプションを利用しません。

@@ -1,16 +1,12 @@
 package net.kunmc.lab.gtawanteddisplaystarplugin.commands;
 
 import net.kunmc.lab.gtawanteddisplaystarplugin.GTAWantedDisplayStarPlugin;
+import net.kunmc.lab.gtawanteddisplaystarplugin.api.Flag;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 
 public class SetWanted implements CommandExecutor
 {
@@ -39,7 +35,8 @@ public class SetWanted implements CommandExecutor
         GTAWantedDisplayStarPlugin.getApi().showStar(player,
                 Integer.parseInt(args[0]),
                 Integer.parseInt(args[1]),
-                Boolean.parseBoolean(args[2]));
+                Boolean.parseBoolean(args[2]) ? Flag.BLINK: Flag.NONE
+        );
         sender.sendMessage(ChatColor.GREEN + "パケットを送信しました。");
 
         return true;

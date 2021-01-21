@@ -1,5 +1,6 @@
 package net.kunmc.lab.gtawanteddisplaystarplugin;
 
+import net.kunmc.lab.gtawanteddisplaystarplugin.api.Flag;
 import net.kunmc.lab.gtawanteddisplaystarplugin.api.StarDisplayAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -17,15 +18,17 @@ public class PrivateAPI implements StarDisplayAPI
     }
 
     @Override
-    public void showStar(Player player, int now, int max, boolean blinking)
+    public void showStar(Player player, int now, int max, Flag... flags)
     {
+        int flag = Flag.encode(flags);
+
         try
         {
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             DataOutputStream out = new DataOutputStream(baos);
             out.writeByte(0);
-            out.writeBytes("" + now + "|" + max + "|" + (blinking ? 0: 1));
+            out.writeBytes("" + now + "|" + max + "|" + flag);
             out.writeByte(0);
             byte[] bytes = baos.toByteArray();
 
@@ -38,9 +41,9 @@ public class PrivateAPI implements StarDisplayAPI
     }
 
     @Override
-    public void showStarBroadcast(int now, int max, boolean blinking)
+    public void showStarBroadcast(int now, int max, Flag... flags)
     {
         Bukkit.getOnlinePlayers()
-                .forEach(player -> showStar(player, now, max, blinking));
+                .forEach(player -> showStar(player, now, max, flags));
     }
 }
