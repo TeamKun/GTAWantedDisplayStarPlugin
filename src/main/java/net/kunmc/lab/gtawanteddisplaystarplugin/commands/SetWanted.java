@@ -27,6 +27,7 @@ public class SetWanted implements CommandExecutor
         try {
             Integer.parseInt(args[0]);
             Integer.parseInt(args[1]);
+            Integer.parseInt(args[2]);
         } catch (NumberFormatException e) {
             sender.sendMessage("引数がおかしいようです！");
             return true;
@@ -35,8 +36,8 @@ public class SetWanted implements CommandExecutor
         GTAWantedDisplayStarPlugin.getApi().showStar(player,
                 Integer.parseInt(args[0]),
                 Integer.parseInt(args[1]),
-                Boolean.parseBoolean(args[2]) ? Flag.BLINK: Flag.NONE
-        );
+                Flag.BLINK.setValue(Integer.parseInt(args[2])
+                ));
         sender.sendMessage(ChatColor.GREEN + "パケットを送信しました。");
 
         return true;

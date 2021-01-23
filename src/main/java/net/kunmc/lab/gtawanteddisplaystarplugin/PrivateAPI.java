@@ -28,7 +28,7 @@ public class PrivateAPI implements StarDisplayAPI
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             DataOutputStream out = new DataOutputStream(baos);
             out.writeByte(0);
-            out.writeBytes("" + now + "|" + max + "|" + flag);
+            out.writeBytes("" + now + "|" + max + "|" + flag + (Flag.BLINK.check(flag) ? "|" + Flag.BLINK.getValue(): ""));
             out.writeByte(0);
             byte[] bytes = baos.toByteArray();
 

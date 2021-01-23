@@ -15,6 +15,7 @@ public enum Flag
     BLINK(0x01);
 
     private final int value;
+    private Number publicValue = 0;
 
     Flag(int value) {
         this.value = value;
@@ -40,5 +41,24 @@ public enum Flag
         for(Flag f: flags)
             flag |= f.value;
         return flag;
+    }
+
+    /**
+     * 値をセットします。
+     * @param publicValue 値です。
+     */
+    public Flag setValue(Number publicValue)
+    {
+        this.publicValue = publicValue;
+        return this;
+    }
+
+    /**
+     * 値を取得します。
+     * @return 値です。
+     */
+    public Number getValue()
+    {
+        return publicValue;
     }
 }
