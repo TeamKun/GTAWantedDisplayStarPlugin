@@ -82,3 +82,8 @@ api.showStarBroadcast(Player, Max, WantedLevel, Flag...);
 ## 使用可能フラグ
 + BLINK => 星が点滅します。
 + NONE => 追加オプションを利用しません。
+### フラグ値指定
+```
+# 1秒に1回殄滅します。
+Flag.BLINK.setValue(1000);
+```
