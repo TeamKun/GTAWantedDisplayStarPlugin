@@ -85,5 +85,5 @@ api.showStarBroadcast(Player, Max, WantedLevel, Flag...);
 ### フラグ値指定
 ```
 # 1秒に1回殄滅します。
-Flag.BLINK.setValue(1000);
+Flag.BLINK.setValue(200);
 ```
