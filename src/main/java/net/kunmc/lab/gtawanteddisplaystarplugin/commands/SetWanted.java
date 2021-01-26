@@ -28,7 +28,7 @@ public class SetWanted implements CommandExecutor
 
         if (args.length != 3) {
             sender.sendMessage(ChatColor.RED + "引数の数がおかしいようです！");
-            sender.sendMessage(ChatColor.RED + "使用法：/wanted <now> <max> <点滅>");
+            sender.sendMessage(ChatColor.RED + "使用法：/setstar <now> <max> <点滅>");
             return true;
         }
 
@@ -38,6 +38,8 @@ public class SetWanted implements CommandExecutor
             Integer.parseInt(args[2]);
         } catch (NumberFormatException e) {
             sender.sendMessage("引数がおかしいようです！");
+            sender.sendMessage(ChatColor.RED + "使用法：/setstar <数値> <数値> <数値>");
+
             return true;
         }
 
