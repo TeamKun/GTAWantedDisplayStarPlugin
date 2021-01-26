@@ -16,9 +16,9 @@ GTAWantedDisplayMod のサーバー側テスト用プラグインです。
 ## 仕様
 
 ### コマンド
-+ /wanted
++ /setstar
 #### つかいかた
-+ /wanted <now> <max> <blinking>
++ /setstar <now> <max> <blinking>
 + now: 現在の(変更した)手配度
 + max: 最高手配度
 + blinking: 点滅
