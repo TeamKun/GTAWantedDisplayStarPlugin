@@ -22,7 +22,7 @@ public final class GTAWantedDisplayStarPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginCommand("wanted").setExecutor(new SetWanted());
+        Bukkit.getPluginCommand("setstar").setExecutor(new SetWanted());
         Bukkit.getMessenger().registerOutgoingPluginChannel(this, "gta:changewanted");
         api = new PrivateAPI(this);
     }
