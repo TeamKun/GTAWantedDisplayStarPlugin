@@ -9,11 +9,18 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SetWanted implements CommandExecutor
+
 {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
             sender.sendMessage(ChatColor.RED + "プレイヤーから実行してください！");
+            return true;
+        }
+
+        if (!sender.hasPermission("star.set"))
+        {
+            sender.sendMessage(ChatColor.RED + "エラー：権限がありません！");
             return true;
         }
 
