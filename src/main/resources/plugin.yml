@@ -4,4 +4,4 @@ main: net.kunmc.lab.gtawanteddisplaystarplugin.GTAWantedDisplayStarPlugin
 api-version: 1.15
 commands:
   setstar:
-    usage: /setstar <NowWanted:int> <MaxWanted:int> <点滅:boolean>
+    usage: /setstar <name:player>  <NowWanted:int> <MaxWanted:int> <点滅:boolean>
