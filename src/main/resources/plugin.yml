@@ -1,4 +1,4 @@
-name: GTAWantedDisplayTestPlugin
+name: GTAWantedDisplayStarPlugin
 version: ${project.version}
 main: net.kunmc.lab.gtawanteddisplaystarplugin.GTAWantedDisplayStarPlugin
 api-version: 1.15
